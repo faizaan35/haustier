@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 130px;
+    color: #131c18;
+    background-color: #f6f3eb;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Hanken Grotesk', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #a8653b;
+    color: #ffffff;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ece6d9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c4a97d;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8653b;
+}
+
+/* Utility classes for subtle grid and textures */
+.bg-grid-subtle {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(210, 180, 140, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(210, 180, 140, 0.12) 1px, transparent 1px);
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
